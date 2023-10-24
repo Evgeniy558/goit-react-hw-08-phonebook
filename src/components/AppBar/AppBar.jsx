@@ -1,9 +1,12 @@
-import { AuthNav } from "../AuthNav";
+import { Navigation } from "../Navigation/Navigation";
+
 import { UserMenu } from "../UserMenu";
 
 export const AppBar = () => {
   const showUserMenu = true;
   return (
-    <div className="container">{showUserMenu ? <UserMenu /> : <AuthNav />}</div>
+    <header className="container">
+      {showUserMenu ? <UserMenu /> : <Navigation />}
+    </header>
   );
 };

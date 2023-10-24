@@ -1,9 +1,10 @@
+import { NavLink } from "react-router-dom";
 import Button from "../contactForm/button/Button";
 
 export const UserMenu = () => {
   return (
     <div className="container">
-      <p>Contacns</p> //Link
+      <NavLink>Contacts</NavLink>
       <p>Welcome {"user"}</p>
       <Button
         type="button"
