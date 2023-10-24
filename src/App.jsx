@@ -1,10 +1,9 @@
-import { useDispatch, useSelector } from "react-redux";
-
+import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { fetchContacts } from "./redux/contacts/operations";
 import { Route, Routes } from "react-router-dom";
 import { Layout } from "./components/Layout/Layout";
-import { HomePage } from "./components/HomePage";
+import { HomePage } from "./components/pages/HomePage/HomePage";
 import { Phonebook } from "./components/pages/Phonebook";
 
 export const App = () => {
