@@ -2,12 +2,19 @@ import css from "./button.module.css";
 import PropTypes from "prop-types";
 import { useDispatch } from "react-redux";
 import { deleteContact } from "../../../redux/contacts/operations";
+import { useAuth } from "../../../hooks";
+import { logOut } from "../../../redux/auth/operations";
 
 const Button = ({ children, typeButton, contact }) => {
   const dispatch = useDispatch();
+  const { token } = useAuth();
+
   const handleDeleteContact = (id) => {
     console.log("delID", id);
     dispatch(deleteContact(id));
+  };
+  const handleLogOut = () => {
+    dispatch(logOut(token));
   };
 
   const classButton =
@@ -25,6 +32,10 @@ const Button = ({ children, typeButton, contact }) => {
           typeButton === "button_del"
             ? () => {
                 handleDeleteContact(contact.id);
+              }
+            : typeButton === "button"
+            ? () => {
+                handleLogOut();
               }
             : null
         }

@@ -5,6 +5,10 @@ import { Route, Routes } from "react-router-dom";
 import { Layout } from "./components/Layout/Layout";
 import { HomePage } from "./components/pages/HomePage/HomePage";
 import { Phonebook } from "./components/pages/Phonebook";
+import { RestrictedRoute } from "./components/RestrictedRouter";
+import { RegistrationForm } from "./components/RegistrationForm/RegistrationForm";
+import { LoginForm } from "./components/loginForm";
+import { PrivateRoute } from "./components/PrivateRoute";
 
 export const App = () => {
   const dispatch = useDispatch();
@@ -16,28 +20,31 @@ export const App = () => {
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<HomePage />} />
-        <Route path="/phonebook" element={<Phonebook />} />
+        <Route
+          path="/register"
+          element={
+            <RestrictedRoute
+              redirectTo="/phonebook"
+              component={<RegistrationForm />}
+            />
+          }
+        />
+        <Route
+          path="/login"
+          element={
+            <RestrictedRoute
+              redirectTo="/phonebook"
+              component={<LoginForm />}
+            />
+          }
+        />
+        <Route
+          path="/phonebook"
+          element={
+            <PrivateRoute redirectTo="/login" component={<Phonebook />} />
+          }
+        />
       </Route>
     </Routes>
-
-    // <div className="App">
-    //   <section className={css.appheader}>
-    //     <section className={css.section}>
-    //       <h1>Phonebook</h1>
-    //       <Form />
-    //     </section>
-    //     <section className={css.section}>
-    //       <h2>Contacts</h2>
-    //       <Filter />
-    //       {isLoading ? (
-    //         <p>Loading</p>
-    //       ) : displayContacts.length > 0 ? (
-    //         <ContactList displayedContacts={displayContacts} />
-    //       ) : (
-    //         <p> No contacts </p>
-    //       )}
-    //     </section>
-    //   </section>
-    // </div>
   );
 };
