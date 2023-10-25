@@ -6,12 +6,12 @@ export const UserMenu = () => {
   const { user } = useAuth();
   return (
     <div className={css.container}>
-      <p className={css.user_greetens}> {user.email} </p>
-      <NavLink to="/">
-        <Button type="button" typeButton="button">
+      <p className={css.user_info}> {user.email} </p>
+      <Button type="button" typeButton="button_registration">
+        <NavLink to="/" className={css.link}>
           Log out
-        </Button>
-      </NavLink>
+        </NavLink>
+      </Button>
     </div>
   );
 };

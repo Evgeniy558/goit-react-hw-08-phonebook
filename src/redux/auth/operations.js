@@ -29,11 +29,11 @@ export const logIn = createAsyncThunk(
   async (credentials, thunkAPI) => {
     try {
       const responce = await axios.post("/users/login", credentials);
-      console.log(responce.data);
+      console.log("logIn", responce.data);
       setAuthHeader(responce.data.token);
       return responce.data;
     } catch (error) {
-      thunkAPI.rejectWithValue(error.massege);
+      alert("Incorrect password or email address. Please try again.");
     }
   }
 );

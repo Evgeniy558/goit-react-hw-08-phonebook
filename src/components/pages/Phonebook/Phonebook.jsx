@@ -21,23 +21,21 @@ export const Phonebook = () => {
   }, [dispatch]);
 
   return (
-    <section className="App">
-      <section className={css.appheader}>
-        <section className={css.section}>
-          <h1>Phonebook</h1>
-          <Form />
-        </section>
-        <section className={css.section}>
-          <h2>Contacts</h2>
-          <Filter />
-          {isLoading ? (
-            <p>Loading</p>
-          ) : displayContacts.length > 0 ? (
-            <ContactList displayedContacts={displayContacts} />
-          ) : (
-            <p> No contacts </p>
-          )}
-        </section>
+    <section className={css.appheader}>
+      <section className={css.section}>
+        <h1>Phonebook</h1>
+        <Form />
+      </section>
+      <section className={css.section}>
+        <h2>Contacts</h2>
+        <Filter />
+        {isLoading ? (
+          <p>Loading</p>
+        ) : displayContacts.length > 0 ? (
+          <ContactList displayedContacts={displayContacts} />
+        ) : (
+          <p> No contacts </p>
+        )}
       </section>
     </section>
   );

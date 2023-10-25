@@ -1,6 +1,7 @@
 :root {
   --btn-add-color: rgb(76, 228, 76);
   --btn-del-color: rgb(228, 76, 122);
+  --btn-registration-color: rgb(243, 73, 5);
 }
 .wrapper {
   position: relative;
@@ -8,7 +9,6 @@
   left: 0;
   margin: auto;
   margin: 0;
-  /* transform: translate(-50%, -50%); */
 }
 
 .button {
@@ -42,6 +42,17 @@
   line-height: 0px;
 }
 
+.button_registration {
+  border: 3px solid var(--btn-registration-color);
+  height: 25px;
+  font-size: 14px;
+  line-height: 0px;
+  padding: 0;
+}
+.button_registration > a {
+  color: var(--btn-registration-color);
+}
+
 .button:before,
 .button:after {
   position: absolute;
@@ -62,6 +73,16 @@
   background: var(--btn-del-color);
 }
 
+.button_registration:hover > a {
+  color: #fff;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.button_registration::before,
+.button_registration::after {
+  background: var(--btn-registration-color);
+}
 .button:before {
   opacity: 0.5;
 }

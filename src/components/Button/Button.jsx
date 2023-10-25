@@ -23,6 +23,8 @@ const Button = ({ children, typeButton, contact }) => {
       ? css["button_add"]
       : typeButton === "button_del"
       ? css["button_del"]
+      : typeButton === "button_registration"
+      ? css["button_registration"]
       : css["button"];
 
   return (
@@ -34,7 +36,7 @@ const Button = ({ children, typeButton, contact }) => {
             ? () => {
                 handleDeleteContact(contact.id);
               }
-            : typeButton === "button"
+            : typeButton === "button_registration"
             ? () => {
                 handleLogOut(token);
                 console.log("handleLogOut", token);

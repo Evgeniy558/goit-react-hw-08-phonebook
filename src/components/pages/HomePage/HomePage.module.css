@@ -1,0 +1,38 @@
+@keyframes rainbow {
+  0% {
+    color: #ff0000;
+  }
+  14% {
+    color: #ff7f00;
+  }
+  28% {
+    color: #ffff00;
+  }
+  42% {
+    color: #7fff00;
+  }
+  57% {
+    color: #00ffff;
+  }
+  71% {
+    color: #0000ff;
+  }
+  85% {
+    color: #8b00ff;
+  }
+  100% {
+    color: #ff0000;
+  }
+}
+
+.rainbowText {
+  animation: rainbow 10s infinite;
+  font-size: 18px;
+  font-family: "Arial", sans-serif;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+.rainbowText h2 {
+  margin: 0;
+  text-align: center; /* Добавлено */
+}

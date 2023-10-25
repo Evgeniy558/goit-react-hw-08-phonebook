@@ -4,7 +4,7 @@ import css from "./Layout.module.css";
 import { Outlet } from "react-router-dom";
 export const Layout = () => {
   return (
-    <div className={css.container}>
+    <div className={css.container_layout}>
       <AppBar />
       <Suspense>
         <Outlet />
