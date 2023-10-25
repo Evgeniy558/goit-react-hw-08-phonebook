@@ -13,7 +13,8 @@ const Button = ({ children, typeButton, contact }) => {
     console.log("delID", id);
     dispatch(deleteContact(id));
   };
-  const handleLogOut = () => {
+  const handleLogOut = (token) => {
+    console.log("handleLogOut", token);
     dispatch(logOut(token));
   };
 
@@ -35,7 +36,8 @@ const Button = ({ children, typeButton, contact }) => {
               }
             : typeButton === "button"
             ? () => {
-                handleLogOut();
+                handleLogOut(token);
+                console.log("handleLogOut", token);
               }
             : null
         }
