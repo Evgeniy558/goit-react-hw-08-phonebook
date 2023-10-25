@@ -1,4 +1,4 @@
-import Button from "../../components/contactForm/button/Button";
+import Button from "../Button/Button";
 import css from "./ContactList.module.css";
 import PropTypes from "prop-types";
 
@@ -9,7 +9,7 @@ const ContactList = ({ displayedContacts }) => {
         return (
           <li key={el.id} className={css.list_item}>
             <div className={css.container_info}>
-              {el.name}: {el.phone}
+              {el.name}: {el.number}
             </div>
             <Button
               className={css.align_btn}

@@ -2,7 +2,7 @@ import { nanoid } from "nanoid";
 import css from "./ContactsForm.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { selectContacts } from "../../redux/contacts/selectors";
-import Button from "./button/Button";
+import Button from "../Button/Button";
 import { addContact } from "../../redux/contacts/operations";
 
 const patternName = "^[a-zA-Z]+(([' \u2013][a-zA-Z])?[a-zA-Z]*)*$";
@@ -16,7 +16,7 @@ const Form = () => {
     ev.preventDefault();
     const form = ev.target;
     const name = form.elements.name.value;
-    const phone = form.elements.number.value;
+    const number = form.elements.number.value;
     if (
       contacts.find((el) => {
         return el.name.toLocaleLowerCase() === name.toLowerCase();
@@ -24,7 +24,7 @@ const Form = () => {
     ) {
       alert(`${name} is already in contacts`);
     } else {
-      dispatch(addContact({ name, phone }));
+      dispatch(addContact({ name, number }));
       form.reset();
     }
   };
