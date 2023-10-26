@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 import css from "./Phonebook.module.css";
-import Form from "../../contactForm/ContactsForm";
-import Filter from "../../filter/Filter";
+import ContactForm from "../../ContactForm/ContactsForm";
+import Filter from "../../Filter/Filter";
 import ContactList from "../../contactList/ContactList";
 import {
   selectFilteredContacts,
@@ -24,7 +24,7 @@ export const Phonebook = () => {
     <section className={css.appheader}>
       <section className={css.section}>
         <h1>Phonebook</h1>
-        <Form />
+        <ContactForm />
       </section>
       <section className={css.section}>
         <h2>Contacts</h2>

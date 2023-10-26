@@ -1,8 +1,9 @@
 :root {
   --btn-add-color: rgb(76, 228, 76);
   --btn-del-color: rgb(228, 76, 122);
-  --btn-registration-color: rgb(243, 73, 5);
+  --btn-registration-color: rgb(228, 76, 122);
 }
+
 .wrapper {
   position: relative;
   top: 0;

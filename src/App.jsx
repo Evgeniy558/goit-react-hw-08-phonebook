@@ -6,7 +6,7 @@ import { HomePage } from "./components/pages/HomePage/HomePage";
 import { Phonebook } from "./components/pages/Phonebook/Phonebook";
 import { RestrictedRoute } from "./components/RestrictedRouter";
 import { RegistrationForm } from "./components/RegistrationForm/RegistrationForm";
-import { LoginForm } from "./components/loginForm";
+import { LoginForm } from "./components/LoginForm";
 import { PrivateRoute } from "./components/PrivateRoute";
 import { refreshUser } from "./redux/auth/operations";
 import { useAuth } from "./hooks";

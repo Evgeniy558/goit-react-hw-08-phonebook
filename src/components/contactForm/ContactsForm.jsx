@@ -8,7 +8,7 @@ import { addContact } from "../../redux/contacts/operations";
 const patternName = "^[a-zA-Z]+(([' \u2013][a-zA-Z])?[a-zA-Z]*)*$";
 const patternTel = "^\\+48\\d{3}\\d{3}\\d{3}$";
 
-const Form = () => {
+const ContactForm = () => {
   const contacts = useSelector(selectContacts);
   const dispatch = useDispatch();
 
@@ -60,4 +60,4 @@ const Form = () => {
   );
 };
 
-export default Form;
+export default ContactForm;
