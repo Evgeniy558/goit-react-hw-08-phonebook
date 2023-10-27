@@ -19,3 +19,6 @@ body {
   display: flex;
   justify-content: center;
 }
+.active {
+  color: rgb(76, 228, 76);
+}

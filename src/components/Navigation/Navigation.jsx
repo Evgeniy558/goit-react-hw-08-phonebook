@@ -4,10 +4,16 @@ import css from "./Navigation.module.css";
 export const Navigation = () => {
   return (
     <nav className={css.container_nav}>
-      <NavLink to="/">Home</NavLink>
+      <NavLink to="/" activeclassname="activeLink">
+        Home
+      </NavLink>
       <div className={css.container_reg}>
-        <NavLink to="/register">Register</NavLink>
-        <NavLink to="/login">Sign in</NavLink>
+        <NavLink to="/register" activeclassname="activeLink">
+          Register
+        </NavLink>
+        <NavLink to="/login" activeclassname="activeLink">
+          Sign in
+        </NavLink>
       </div>
     </nav>
   );
